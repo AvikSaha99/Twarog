@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+    
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Twarog</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='CSS/styles.css') }}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Serif:ital,opsz,wght@0,8..144,100..900;1,8..144,100..900&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <header>
+        <div class="container">
+          <div class="logo">
+            <a href="index.html">
+                <img src="{{ url_for('static', filename='images/icon1.svg') }}" alt="Logo">
+            </a>
+        </div>
+          <nav>
+            <ul>
+                <li class="dropdown">
+                    <a href="#" class="dropbtn">Disease</a>
+                    <div class="dropdown-content">
+                        <a href="{{ url_for('basalcell') }}">Basal Cell Carcinoma</a>
+                        <a href="{{ url_for('actinic') }}">Actinic Keratosis</a>
+                        <a href="{{ url_for('melanocytic') }}">Melanocytic Nevi</a>
+                        <a href="{{ url_for('benign') }}">Benign Keratosis</a>
+                        <a href="{{ url_for('melanoma') }}">Melanoma</a>
+                        <a href="{{ url_for('dermatofibroma') }}">Dermatofibroma</a>
+                        <a href="{{ url_for('vascular') }}">Vascular Lesions</a>
+                    </div>
+                </li>
+                <li><a href="{{ url_for('about') }}">About US</a></li>
+                <li><a href="{{ url_for('contact') }}">Contact US</a></li>
+            </ul>
+          </nav>
+        </div>
+      </header>
+
+    <section class="hero">
+        <div class="hero-container">
+            <h1>Welcome to Twarog</h1>
+            <p>This website is specially designed for users to check their dermatological manifestations.</p>
+            <h3>Get Results just by filling out the following form and uploading a picture of your affected area</h3>
+        </div>
+    </section>
+
+    <section class="form-section">
+        <div class="form-container">
+            <form action="/" method="POST" enctype="multipart/form-data">
+                <h5 style="margin-top: 0;">Basic Personal Details</h5>
+                <div class="form-group">
+                    <label for="age">Age (in years):</label>
+                    <input type="number" id="age" name="age" required>
+                </div>
+                <div class="form-group">
+                    <label for="age">height (in cm):</label>
+                    <input type="number" id="Height" name="Height" required>
+                </div>
+                <div class="form-group">
+                    <label for="age">Weight (in kgs):</label>
+                    <input type="number" id="weight" name="weight" required>
+                </div>
+                <div class="form-group">
+                    <label for="gender">Gender:</label>
+                    <select id="gender" name="gender" required>
+                        <option value="male">Male</option>
+                        <option value="female">Female</option>
+                        <option value="other">Other</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="state">Which State are you from:</label>
+                    <select id="state" name="state" required>
+                        <option value="">Select State</option>
+                        <option value="Andhra Pradesh">Andhra Pradesh</option>
+                        <option value="Arunachal Pradesh">Arunachal Pradesh</option>
+                        <option value="Assam">Assam</option>
+                        <option value="Bihar">Bihar</option>
+                        <option value="Chhattisgarh">Chhattisgarh</option>
+                        <option value="Goa">Goa</option>
+                        <option value="Gujarat">Gujarat</option>
+                        <option value="Haryana">Haryana</option>
+                        <option value="Himachal Pradesh">Himachal Pradesh</option>
+                        <option value="Jharkhand">Jharkhand</option>
+                        <option value="Karnataka">Karnataka</option>
+                        <option value="Kerala">Kerala</option>
+                        <option value="Madhya Pradesh">Madhya Pradesh</option>
+                        <option value="Maharashtra">Maharashtra</option>
+                        <option value="Manipur">Manipur</option>
+                        <option value="Meghalaya">Meghalaya</option>
+                        <option value="Mizoram">Mizoram</option>
+                        <option value="Nagaland">Nagaland</option>
+                        <option value="Odisha">Odisha</option>
+                        <option value="Punjab">Punjab</option>
+                        <option value="Rajasthan">Rajasthan</option>
+                        <option value="Sikkim">Sikkim</option>
+                        <option value="Tamil Nadu">Tamil Nadu</option>
+                        <option value="Telangana">Telangana</option>
+                        <option value="Tripura">Tripura</option>
+                        <option value="Uttar Pradesh">Uttar Pradesh</option>
+                        <option value="Uttarakhand">Uttarakhand</option>
+                        <option value="West Bengal">West Bengal</option>
+                        <option value="Andaman and Nicobar Islands">Andaman and Nicobar Islands</option>
+                        <option value="Chandigarh">Chandigarh</option>
+                        <option value="Dadra and Nagar Haveli and Daman and Diu">Dadra and Nagar Haveli and Daman and Diu</option>
+                        <option value="Lakshadweep">Lakshadweep</option>
+                        <option value="Delhi">Delhi (National Capital Territory of Delhi)</option>
+                        <option value="Puducherry">Puducherry</option>
+                    </select>
+                </div>    
+                <h5 style="margin-bottom: 30px;">Details about your Vitals</h5>
+                <!-- Your Pulse Rate -->
+                <div class="form-group">
+                    <label for="pr">Your Pulse Rate is between 60 to 100 beats/minute:</label>
+                    <select id="pr" name="pr" required>
+                        <option value="">Select One</option>
+                        <option value="Yes">Yes</option>
+                        <option value="No">No</option>
+                    </select>
+                </div>
+
+                <!-- Your Sun Interaction -->
+                <div class="form-group">
+                    <label for="si">Your Sun Interaction:</label>
+                    <select id="si" name="si" required>
+                        <option value="">Select One</option>
+                        <option value="More than 6hr">More than 6hr</option>
+                        <option value="Less than 6hr">Less than 6hr</option>
+                        <option value="Between 4hr to 6hr">Between 4hr to 6hr</option>
+                        <option value="None">None</option>
+                    </select>
+                </div>
+
+                <!-- Your Skin Type -->
+                <div class="form-group">
+                    <label for="st">Your Skin Type:</label>
+                    <select id="st" name="st" required>
+                        <option value="">Select One</option>
+                        <option value="Fair Skin">Fair Skin</option>
+                        <option value="Dark Skin">Dark Skin</option>
+                        <option value="None">None</option>
+                    </select>
+                </div>
+
+                <h5>Details related to disease</h5>
+                <div class="form-group">
+                    <label for="pos">Position:</label>
+                    <select id="pos" name="pos" required>
+                        <option value="">Select Position</option>
+                        <option value="Abdomen">Abdomen</option>
+                        <option value="Acral">Acral</option>
+                        <option value="Back">Back</option>
+                        <option value="Chest">Chest</option>
+                        <option value="Ear">Ear</option>
+                        <option value="Face">Face</option>
+                        <option value="Foot">Foot</option>
+                        <option value="Genital">Genital</option>
+                        <option value="Hand">Hand</option>
+                        <option value="lower extremity">Lower Extremity</option>
+                        <option value="neck">Neck</option>
+                        <option value="scalp">Scalp</option>
+                        <option value="trunk">Trunk</option>
+                        <option value="unknown">Unknown</option>
+                        <option value="upper extremity">Upper Extremity</option>
+                        <option value="none">None</option>
+                    </select>
+                </div>
+                
+               <!-- Color of Infection -->
+                <div class="form-group">
+                    <label for="color">Color of Infection:</label>
+                    <select id="color" name="color" required>
+                        <option value="">Select Color</option>
+                        <option value="Flesh or pink colored">Flesh or pink colored</option>
+                        <option value="Tan-pink to reddish-brown discoloration">Tan-pink to reddish-brown discoloration</option>
+                        <option value="Irregular, red, scaly papules or plaques">Irregular, red, scaly papules or plaques</option>
+                        <option value="Brown or black">Brown or black</option>
+                        <option value="Brown, yellow, orange, black, pink, red, and gray">Brown, yellow, orange, black, pink, red, and gray</option>
+                        <option value="Bright red to deep purple in color">Bright red to deep purple in color</option>
+                        <option value="Blue-black appearance of nodular">Blue-black appearance of nodular</option>
+                    </select>
+                </div>
+
+                <!-- Size of Infection -->
+                    <div class="form-group">
+                        <label for="size">Size of Infection:</label>
+                        <select id="size" name="size" required>
+                            <option value="">Select Size</option>
+                            <option value="Vary from small, surface-level lesions to larger lumps or deeply penetrating tumors">Vary from small, surface-level lesions to larger lumps or deeply penetrating tumors</option>
+                            <option value="Less than or equal to one centimeter in diameter">Less than or equal to one centimeter in diameter</option>
+                            <option value="Vary in size and number">Vary in size and number</option>
+                            <option value="a few millimeters to several centimeters">a few millimeters to several centimeters</option>
+                            <option value="Size over time, undergoing phases of growth and shrinking. These lesions often manifest as small raised bumps, varying in size and depth of penetration into surrounding tissues.">Size over time, undergoing phases of growth and shrinking. These lesions often manifest as small raised bumps, varying in size and depth of penetration into surrounding tissues.</option>
+                            <option value="Small lesions and grow over time">Small lesions and grow over time</option>
+                            <option value="None">None</option>
+                        </select>
+                    </div>
+
+                    <!-- Shape of Infection -->
+                    <div class="form-group">
+                        <label for="shape">Shape of Infection:</label>
+                        <select id="shape" name="shape" required>
+                            <option value="">Select Shape</option>
+                            <option value="Papules or nodules">Papules or nodules</option>
+                            <option value="Firm, non-tender cutaneous nodules with smooth surfaces">Firm, non-tender cutaneous nodules with smooth surfaces</option>
+                            <option value="Irregular borders, asymmetry, and elevation">Irregular borders, asymmetry, and elevation</option>
+                            <option value="Sharply demarcated borders and can be irregular or round in shape">Sharply demarcated borders and can be irregular or round in shape</option>
+                            <option value="Raised papules, distinct vascular channels">Raised papules, distinct vascular channels</option>
+                            <option value="Asymmetry, irregular border, elevated surface">Asymmetry, irregular border, elevated surface</option>
+                            <option value="None">None</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="gen">In Your Family History, does anyone have any of the following diseases:</label>
+                        <select id="gen" name="gen" required>
+                            <option value="">Select</option>
+                            <option value="Basal Cell Carcinoma">Basal Cell Carcinoma</option>
+                            <option value="Actinic Keratosis">Actinic Keratosis</option>
+                            <option value="Melanocytic Nevi">Melanocytic Nevi</option>
+                            <option value="Benign Keratosis">Benign Keratosis</option>
+                            <option value="Melanoma">Melanoma</option>
+                            <option value="None">None</option>
+                        </select>
+                    </div>
+
+                    
+                <div class="form-group">
+                    <label for="image">Upload Image:</label>
+                    <input class="img-upload" type="file" id="image" name="file" accept="image/*" required>
+                </div>
+                <button type="submit">Submit</button>
+            </form>
+        </div>
+    </section>
+	
+    
+    
+    <section class="doctor-section">
+        <div class="hero-container">
+            {% with messages = get_flashed_messages() %}
+	        {% if messages %}
+            Diagnosis for the following image is: <u><h3 style="font-size: 36px;">{{ messages[0] }}</h3></u><br>
+                <h3>For further inspection, kindly consult with a doctor.</h3>
+                <a href="{{ url_for('doctors') }}" class="btn">Check for Doctors</a>
+            {% endif %}
+            {% endwith %}
+        </div>
+    </section>
+
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Twarog Healthcare. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+</body>
+</html>

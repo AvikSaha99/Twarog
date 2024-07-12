@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Twarog</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='CSS/styles.css') }}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Serif:ital,opsz,wght@0,8..144,100..900;1,8..144,100..900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="container">
+          <div class="logo">
+            <a href="index.html">
+                <img src="{{ url_for('static', filename='images/icon1.svg') }}" alt="Logo">
+            </a>
+        </div>
+          <nav>
+            <ul>
+                <li class="dropdown">
+                    <a href="#" class="dropbtn">Disease</a>
+                    <div class="dropdown-content">
+                        <a href="{{ url_for('basalcell') }}">Basal Cell Carcinoma</a>
+                        <a href="{{ url_for('actinic') }}">Actinic Keratosis</a>
+                        <a href="{{ url_for('melanocytic') }}">Melanocytic Nevi</a>
+                        <a href="{{ url_for('benign') }}">Benign Keratosis</a>
+                        <a href="{{ url_for('melanoma') }}">Melanoma</a>
+                        <a href="{{ url_for('dermatofibroma') }}">Dermatofibroma</a>
+                        <a href="{{ url_for('vascular') }}">Vascular Lesions</a>
+                    </div>
+                </li>
+                <li><a href="{{ url_for('about') }}">About US</a></li>
+                <li><a href="{{ url_for('contact') }}">Contact US</a></li>
+            </ul>
+          </nav>
+        </div>
+      </header>
+    <section class="blog">
+        <div class="blog-container">
+            <h1>Actinic Keratosis</h1> 
+            <p>Actinic Keratosis (AK), also known as solar keratosis, is a common skin condition caused by long-term exposure to ultraviolet (UV) radiation. AK appears as rough, scaly patches on sun-exposed areas of the skin, such as the face, ears, neck, scalp, chest, and hands. While AK itself is not cancerous, it is considered a precancerous condition that can develop into squamous cell carcinoma (SCC) if left untreated. Early detection and management are crucial to prevent progression to skin cancer.</p>
+            <p>Actinic Keratosis is characterized by the formation of rough, scaly, or crusty patches on the skin. These patches are often small, ranging from a few millimeters to several centimeters in diameter, and can be pink, red, brown, or skin-colored. AK lesions may feel dry or rough to the touch and can sometimes itch or become tender.</p>
+            <p>Diagnosis typically involves a physical examination by a dermatologist, who may use a dermatoscope to examine the lesions more closely. In some cases, a skin biopsy may be performed to rule out squamous cell carcinoma or other skin conditions.</p>
+        </div>
+    </section>
+
+    <div class="image-container">
+        <div class="image-wrapper">
+            <img src="{{ url_for('static', filename='images/Actinic 1.jpg') }}" alt="Image 1">
+        </div>
+        <div class="image-wrapper">
+            <img src="{{ url_for('static', filename='images/Actinic 2.jpg') }}" alt="Image 2">
+        </div>
+        <div class="image-wrapper">
+            <img src="{{ url_for('static', filename='images/Actinic 3.jpg') }}" alt="Image 3">
+        </div>
+        <div class="image-wrapper">
+            <img src="{{ url_for('static', filename='images/Actinic 4.jpg') }}" alt="Image 4">
+        </div>
+    </div>
+
+    <section class="links">
+        <div class="links-container">
+            <h5>Important Reference Links</h5>
+            <ul>
+                <li><a href="https://www.mayoclinic.org/diseases-conditions/actinic-keratosis/symptoms-causes/syc-20354969" target="_blank" rel="noopener noreferrer">Actinic Keratosis - Mayoclinic.org</a></li>
+                <li><a href="https://www.aad.org/public/diseases/skin-cancer/actinic-keratosis-overview" target="_blank" rel="noopener noreferrer">Actinic Keratosis - American Acadmy of Dermatology </a></li>
+                <li><a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6939186/" target="_blank" rel="noopener noreferrer">Actinic Keratosis: Causes, Symptoms & Treatment - NIH</a></li>
+            </ul>
+        </div>
+    </section>
+    
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Twarog Healthcare. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+</body>
+</html>

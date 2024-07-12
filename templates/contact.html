@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Twarog</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='CSS/styles.css') }}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Serif:ital,opsz,wght@0,8..144,100..900;1,8..144,100..900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="container">
+          <div class="logo">
+            <a href="index.html">
+                <img src="{{ url_for('static', filename='images/icon1.svg') }}" alt="Logo">
+            </a>
+        </div>
+          <nav>
+            <ul>
+                <li class="dropdown">
+                    <a href="#" class="dropbtn">Disease</a>
+                    <div class="dropdown-content">
+                        <a href="{{ url_for('basalcell') }}">Basal Cell Carcinoma</a>
+                        <a href="{{ url_for('actinic') }}">Actinic Keratosis</a>
+                        <a href="{{ url_for('melanocytic') }}">Melanocytic Nevi</a>
+                        <a href="{{ url_for('benign') }}">Benign Keratosis</a>
+                        <a href="{{ url_for('melanoma') }}">Melanoma</a>
+                        <a href="{{ url_for('dermatofibroma') }}">Dermatofibroma</a>
+                        <a href="{{ url_for('vascular') }}">Vascular Lesions</a>
+                    </div>
+                </li>
+                <li><a href="{{ url_for('about') }}">About US</a></li>
+                <li><a href="{{ url_for('contact') }}">Contact US</a></li>
+            </ul>
+          </nav>
+        </div>
+      </header>
+      <section class="hero">
+        <div class="hero-container">
+            <h1>Contact us</h1>
+        </div>
+    </section>
+
+    <section class="form-section" style="padding-top: 4px;">
+        <div class="form-container">
+            <form action="#" method="POST" enctype="multipart/form-data">
+                <div class="form-group">
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email id:</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group" class="enquiry-input">
+                        <label for="enquiry">Tell us your Enquiry:</label>
+                        <textarea id="enquiry" name="enquiry" rows="5" required></textarea>
+                </div>
+
+                <button type="submit">Submit</button>
+            </form>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Twarog Healthcare. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+</body>
+</html>

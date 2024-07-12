@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Twarog</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='CSS/styles.css') }}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Serif:ital,opsz,wght@0,8..144,100..900;1,8..144,100..900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="container">
+          <div class="logo">
+            <a href="index.html">
+                <img src="{{ url_for('static', filename='images/icon1.svg') }}" alt="Logo">
+            </a>
+        </div>
+          <nav>
+            <ul>
+                <li class="dropdown">
+                    <a href="#" class="dropbtn">Disease</a>
+                    <div class="dropdown-content">
+                        <a href="{{ url_for('basalcell') }}">Basal Cell Carcinoma</a>
+                        <a href="{{ url_for('actinic') }}">Actinic Keratosis</a>
+                        <a href="{{ url_for('melanocytic') }}">Melanocytic Nevi</a>
+                        <a href="{{ url_for('benign') }}">Benign Keratosis</a>
+                        <a href="{{ url_for('melanoma') }}">Melanoma</a>
+                        <a href="{{ url_for('dermatofibroma') }}">Dermatofibroma</a>
+                        <a href="{{ url_for('vascular') }}">Vascular Lesions</a>
+                    </div>
+                </li>
+                <li><a href="{{ url_for('about') }}">About US</a></li>
+                <li><a href="{{ url_for('contact') }}">Contact US</a></li>
+            </ul>
+          </nav>
+        </div>
+      </header>
+
+      <section class="hero">
+        <div class="hero-container">
+            <h1>About us</h1>
+            <p>Welcome to our platform dedicated to advancing dermatological health through innovation and technology. We are a passionate team of four final-year B.Tech students in Computer Science and Engineering, driven by a shared commitment to making a meaningful impact in healthcare.</p>
+            <p>Our journey began with a vision to address pressing challenges in dermatology, sparked by our participation in the prestigious Smart India Hackathon. Recognized by the Indian government, our project emerged as a solution aimed at leveraging AI and machine learning to detect and analyze dermatological conditions with accuracy and efficiency.</p>
+
+            <section class="links">
+                <div class="links-container">
+                 <ul>
+                        <li style="padding: 10px 0 20px 0;"><Strong>Nilesh Maity:</Strong> An ardent enthusiast of AI and machine learning, Nilesh spearheaded the development of our robust ML and DL models. His expertise ensures the precision and reliability of our predictive capabilities in diagnosing dermatological manifestations.</li>
+                        <li style="padding: 10px 0 20px 0;"><strong>Swapneel Biswas:</strong> Leading our research efforts, Swapneel meticulously explored the project's objectives, significance in healthcare, disease details, and conducted competitive market research to ensure our solution stands at the forefront of innovation.</li>
+                        <li style="padding: 10px 0 20px 0;"><strong>Avik Saha:</strong> With a passion for web development, Avik played a pivotal role in bringing our vision to life online. He seamlessly integrated our ML and DL models into a user-friendly web interface, ensuring optimal functionality and accessibility for all users.</li>
+                        <li style="padding: 10px 0 0 0;"><Strong>Akash Das:</Strong> A master of frontend design, Akash crafted the captivating visual identity of our website. His dedication to user experience and interface design ensures that navigating our platform is both intuitive and visually engaging.</li>
+                    </ul>
+                </div>
+            </section>
+            <h2>Our Commitment to Innovation:</h2>
+            <p style="padding-top: 0;">As a team, we are committed to continuous improvement and innovation. We envision our platform not only as a tool for accurate diagnosis but also as a resource for education and empowerment in dermatological health. Moving forward, we plan to expand our capabilities by integrating new features that enhance user experience and provide comprehensive insights into skin conditions.            </p>
+            <p>Join us on this journey as we strive to make a difference in healthcare through technology and collaboration. Together, we aim to empower individuals with the tools and knowledge to manage their dermatological health effectively. Whether you are seeking reliable diagnostic tools or exploring advancements in AI-driven healthcare, our platform is designed to meet your needs and exceed your expectations.</p>
+        </div>
+    </section>
+
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Twarog Healthcare. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+</body>
+</html>

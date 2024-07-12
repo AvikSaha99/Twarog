@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Twarog</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='CSS/styles.css') }}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Serif:ital,opsz,wght@0,8..144,100..900;1,8..144,100..900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="container">
+          <div class="logo">
+            <a href="index.html">
+                <img src="{{ url_for('static', filename='images/icon1.svg') }}" alt="Logo">
+            </a>
+        </div>
+          <nav>
+            <ul>
+                <li class="dropdown">
+                    <a href="#" class="dropbtn">Disease</a>
+                    <div class="dropdown-content">
+                        <a href="{{ url_for('basalcell') }}">Basal Cell Carcinoma</a>
+                        <a href="{{ url_for('actinic') }}">Actinic Keratosis</a>
+                        <a href="{{ url_for('melanocytic') }}">Melanocytic Nevi</a>
+                        <a href="{{ url_for('benign') }}">Benign Keratosis</a>
+                        <a href="{{ url_for('melanoma') }}">Melanoma</a>
+                        <a href="{{ url_for('dermatofibroma') }}">Dermatofibroma</a>
+                        <a href="{{ url_for('vascular') }}">Vascular Lesions</a>
+                    </div>
+                </li>
+                <li><a href="{{ url_for('about') }}">About US</a></li>
+                <li><a href="{{ url_for('contact') }}">Contact US</a></li>
+            </ul>
+          </nav>
+        </div>
+      </header>
+        <section class="blog">
+        <div class="blog-container">
+            <h1>Dermatofibroma</h1> 
+            <p>Dermatofibromas are common benign skin growths that typically appear as small, firm nodules. They are composed of a mixture of fibrous tissue and skin cells. While usually harmless, dermatofibromas can sometimes be mistaken for other types of skin lesions, making it important to understand their characteristics, causes, and treatment options.</p>
+            <p>Dermatofibromas are benign skin tumors that most often appear on the lower legs, though they can occur anywhere on the body. They are usually small, measuring between 0.5 to 1 centimeter in diameter, and are often slightly raised above the skin surface. Dermatofibromas can vary in color from pink to brown, and they are typically firm to the touch. One characteristic feature is the "dimple sign"—when the sides of the lesion are pinched, the center of the dermatofibroma tends to dimple inward.</p>
+            <p>Diagnosis of dermatofibroma is generally clinical, based on the characteristic appearance and texture of the lesion. A dermatologist can usually diagnose a dermatofibroma by examining it visually and palpating it. In cases where the diagnosis is uncertain, a skin biopsy may be performed to confirm that the growth is benign and to rule out other conditions, such as malignant melanoma or basal cell carcinoma.</p>    
+        </div>
+    </section>
+
+    <div class="image-container">
+        <div class="image-wrapper">
+            <img src="{{ url_for('static', filename='images/Melanoma.jpg') }}" alt="Image 1">
+        </div>
+        <div class="image-wrapper">
+            <img src="{{ url_for('static', filename='images/Melanoma.jpg') }}" alt="Image 2">
+        </div>
+        <div class="image-wrapper">
+            <img src="{{ url_for('static', filename='images/Melanoma.jpg') }}" alt="Image 3">
+        </div>
+        <div class="image-wrapper">
+            <img src="{{ url_for('static', filename='images/Melanoma.jpg') }}" alt="Image 4">
+        </div>
+    </div>
+
+    <section class="links">
+        <div class="links-container">
+            <h5>Important Reference Links</h5>
+            <ul>
+                <li><a href="#" target="_blank" rel="noopener noreferrer">Link 1</a></li>
+                <li><a href="#" target="_blank" rel="noopener noreferrer"> Link 2</a></li>
+                <li><a href="#" target="_blank" rel="noopener noreferrer">Link 3</a></li>
+            </ul>
+        </div>
+    </section>
+    
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Twarog Healthcare. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+</body>
+</html>

@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Twarog</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='CSS/styles.css') }}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Serif:ital,opsz,wght@0,8..144,100..900;1,8..144,100..900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="container">
+          <div class="logo">
+            <a href="index.html">
+                <img src="{{ url_for('static', filename='images/icon1.svg') }}" alt="Logo">
+            </a>
+        </div>
+          <nav>
+            <ul>
+                <li class="dropdown">
+                    <a href="#" class="dropbtn">Disease</a>
+                    <div class="dropdown-content">
+                        <a href="{{ url_for('basalcell') }}">Basal Cell Carcinoma</a>
+                        <a href="{{ url_for('actinic') }}">Actinic Keratosis</a>
+                        <a href="{{ url_for('melanocytic') }}">Melanocytic Nevi</a>
+                        <a href="{{ url_for('benign') }}">Benign Keratosis</a>
+                        <a href="{{ url_for('melanoma') }}">Melanoma</a>
+                        <a href="{{ url_for('dermatofibroma') }}">Dermatofibroma</a>
+                        <a href="{{ url_for('vascular') }}">Vascular Lesions</a>
+                    </div>
+                </li>
+                <li><a href="{{ url_for('about') }}">About US</a></li>
+                <li><a href="{{ url_for('contact') }}">Contact US</a></li>
+            </ul>
+          </nav>
+        </div>
+      </header>
+    <section class="blog">
+        <div class="blog-container">
+            <h1>Melanoma</h1> 
+            <p>Melanoma is the most dangerous form of skin cancer, originating in the melanocytes, the cells responsible for producing melanin, the pigment that gives skin its color. Although it is less common than other types of skin cancer, melanoma is more likely to grow and spread if not detected early. Awareness of the risk factors, symptoms, and prevention strategies is crucial for reducing the incidence and improving the prognosis of melanoma.</p>
+            <p>Melanoma develops when melanocytes begin to grow uncontrollably, often due to DNA damage caused by ultraviolet (UV) radiation from the sun or tanning beds. It can occur anywhere on the body but is most commonly found on sun-exposed areas such as the face, back, arms, and legs. Melanoma can also develop in areas not typically exposed to the sun, such as the soles of the feet, palms of the hands, and under the nails.</p>
+            <p>Diagnosis involves a physical examination by a dermatologist, who may use a dermatoscope to examine the mole more closely. If melanoma is suspected, a biopsy is performed to remove a sample of the tissue for further examination under a microscope.</p>
+        </div>
+    </section>
+
+    <div class="image-container">
+        <div class="image-wrapper">
+            <img src="{{ url_for('static', filename='images/Melanoma.jpg') }}" alt="Image 1">
+        </div>
+        <div class="image-wrapper">
+            <img src="{{ url_for('static', filename='images/Melanoma.jpg') }}" alt="Image 2">
+        </div>
+        <div class="image-wrapper">
+            <img src="{{ url_for('static', filename='images/Melanoma.jpg') }}" alt="Image 3">
+        </div>
+        <div class="image-wrapper">
+            <img src="{{ url_for('static', filename='images/Melanoma.jpg') }}" alt="Image 4">
+        </div>
+    </div>
+
+    <section class="links">
+        <div class="links-container">
+            <h5>Important Reference Links</h5>
+            <ul>
+                <li><a href="#" target="_blank" rel="noopener noreferrer">Link 1</a></li>
+                <li><a href="#" target="_blank" rel="noopener noreferrer"> Link 2</a></li>
+                <li><a href="#" target="_blank" rel="noopener noreferrer">Link 3</a></li>
+            </ul>
+        </div>
+    </section>
+    
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Twarog Healthcare. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+</body>
+</html>

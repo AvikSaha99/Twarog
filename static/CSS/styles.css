@@ -1,0 +1,411 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+body {
+    font-family: "Roboto Serif", serif;
+    margin: 0;
+    padding: 0;
+    background-color: #E6EAED;
+    color: #171739;
+}
+
+.container {
+    max-width: 1320px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* -------------- NAVBAR ---------------- */
+.logo img {
+  height: 50px; 
+  width: auto;
+  background-color: #C2D7E7; 
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #C2D7E7; 
+  padding: 16px 0;
+}
+
+header .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.logo img {
+    max-height: 30px;
+    vertical-align: middle;
+}
+
+nav ul {
+  list-style: none;
+}
+
+nav ul li {
+  display: inline;
+  margin-left: 40px;
+}
+
+nav ul li a {
+  color: #171739;
+  text-decoration: none;
+  font-size: 18px; 
+  font-family: "Roboto Serif", serif;
+  background-color: #C2D7E7; 
+}
+
+/* -----------------DROPDOWN-------------------- */
+/* Dropdown Button */
+.dropbtn {
+    color: #171739;
+    padding: 16px;
+    font-size: 18px;
+    border: none;
+    cursor: pointer;
+}
+
+/* Dropdown Content (Hidden by Default) */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 180px;
+    box-shadow: 0px 16px 32px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+    color: #171739;
+    padding: 8px 16px;
+    font-size: 14px;
+    text-decoration: none;
+    display: block;
+}
+
+/* Change color of dropdown links on hover */
+.dropdown-content a:hover {
+    background-color: #94aec2;
+}
+
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+
+/* -------------------HERO SECTION ----------------------- */
+.hero-container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 0 16px;
+}
+
+.hero {
+    background-color: #E6EAED;
+    text-align: center;
+    padding: 20px 0;
+}
+
+.hero h1 {
+    margin: 30px 4px;
+    font-size: 68px;
+    color: #171739;
+}
+.hero h3 {
+    margin: 20px 4px;
+    text-decoration: none;
+    font-size: 14px;
+    color: #171739;
+}
+.hero p {
+    font-size: 16px;
+    color: #171739de;
+    margin-top: 70px;
+}
+
+/* ------------------FORM SECTION -------------------------- */
+.form-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+.form-section {
+    text-align: center;
+    padding: 50px 0;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    text-align: left;
+    padding-left: 8px;
+    font-weight: bold;
+    font-size: 18px;
+}
+.form-container h5 {
+    display: block;
+    margin-bottom: 12px;
+    margin-top: 80px;
+    font-weight: bold;
+    font-size: 24px;
+}
+
+input, textarea {
+    width: 100%;
+    padding: 14px;
+    font-size: 16px;
+    font-family: "Roboto Serif", serif;
+    border: 2px solid #171739;
+    border-radius: 8px;
+}
+
+textarea {
+    resize: none; /* Prevents the user from resizing the textarea */
+}
+
+
+.form-group input,
+.form-group select {
+    width: 100%;
+    padding: 14px;
+    font-size: 16px;
+    font-family: "Roboto Serif", serif;
+    border: 2px solid #171739;
+    border-radius: 8px;
+}
+.form-group .img-upload {
+    padding: 30px;
+}
+
+button[type="submit"] {
+    padding: 12px 50px;
+    font-family: "Roboto Serif", serif;
+    font-size: 20px;
+    font-weight: bold;
+    background-color: #C2D7E7;
+    color: #171739;
+    border: 2px solid #171739;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin: 20px;
+}
+
+button[type="submit"]:hover {
+    background-color: #83beeb;
+}
+
+
+/* --------------DOCTOR SECTION------------------------ */
+.doctor-section {
+    background-color: #E6EAED;
+    text-align: center;
+    padding: 50px 0;
+}
+
+.doctor-section h3 {
+    margin-bottom: 40px;
+    text-decoration: none;
+    font-size: 16px;
+    color: #171739;
+}
+
+.btn {
+    display: inline-block;
+    padding: 14px 56px;
+    font-family: "Roboto Serif", serif;
+    font-size: 16px;
+    background-color: #C2D7E7;
+    color: #171739;
+    border: 0.4px solid #171739;
+    text-decoration: none;
+    border-radius: 3px;
+    transition: background-color 0.3s;
+}
+
+.btn:hover {
+    background-color: #83beeb;
+}
+
+/* -------------FOOTER-------------- */
+
+footer {
+    background-color: #C2D7E7;
+    text-align: center;
+    font-size: 12px;
+    padding: 16px 0;
+    bottom: 0;
+    width: 100%;
+}
+/* ------------------BLOG----------------------- */
+.image-container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.image-wrapper {
+    margin-top: 30px;
+    width: calc(25% - 20px);
+    margin-bottom: 20px;
+    overflow: hidden;
+}
+
+.image-wrapper img {
+    width: 100%;
+    height: 200px; /* Adjust the height as needed */
+    display: block;
+    object-fit: cover;
+}
+/* -----------------BLOG SECTION--------------------------- */
+.blog-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    text-align: left;
+}
+
+.blog {
+    background-color: #E6EAED;
+    padding: 50px 0;
+}
+
+.blog h1 {
+    margin-bottom: 20px;
+    font-size: 54px;
+    color: #171739;
+    text-decoration: underline;
+}
+.blog p {
+    font-size: 16px;
+    color: #171739de;
+    margin-top: 30px;
+}
+
+/* -----------------LINK SECTION----------------------- */
+
+.links {
+    margin-bottom: 30px;
+    padding: 20px;
+}
+.links-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    text-align: left;
+}
+.links-container a{
+    font-size: 16px;
+    font-family: "Roboto Serif", serif;
+    color: #17173994;
+}
+.links-container h5 {
+    font-size: 20px;
+    margin-bottom: 12px;
+}
+
+/* ---------------RESPONSIVENESS------------------------- */
+
+@media screen and (max-width: 767px) {
+    .logo img {
+        height: 30px; 
+        width: auto;
+        background-color: #C2D7E7; 
+      }
+    .logo img {
+        max-height: 20px;
+        vertical-align: middle;
+    }
+    
+    nav ul li {
+      display: inline;
+      margin-left: 16px;
+    }
+    
+    nav ul li a {
+      color: #171739;
+      text-decoration: none;
+      font-size: 12px; 
+      font-family: "Roboto Serif", serif;
+      background-color: #C2D7E7; 
+    }
+    .dropbtn {
+        color: #171739;
+        padding: 16px;
+        font-size: 12px;
+        border: none;
+        cursor: pointer;
+    }
+    .dropdown-content a {
+        color: #171739;
+        padding: 6px 12px;
+        font-size: 12px;
+        text-decoration: none;
+        display: block;
+    }
+
+    .hero h1 {
+        margin: 28px 4px;
+        font-size: 38px;
+        color: #171739;
+    }
+    .hero h3 {
+        margin: 12px 4px;
+        text-decoration: none;
+        font-size: 12px;
+        color: #171739;
+    }
+    .hero p {
+        font-size: 12px;
+        color: #171739de;
+        margin-top: 40px;
+    }
+}
+
+/* ------------------ Doctor List ---------------------- */
+#searchInput {
+    width: 70%;
+    padding: 16px 20px;
+    margin-top: 20px;
+    font-size: 16px;
+    border: 1px solid #000000;
+    border-radius: 12px;
+}
+
+table {
+    width: 70%;
+    border-collapse: collapse;
+    margin: 20px auto; /* Center the table */
+}
+td {
+    padding: 20px;
+    text-align: center;
+    border: 1px solid #2D232E;
+    font-size: 16px;
+
+}
+th {
+    padding: 24px;
+    text-align: center;
+    border: 2px solid #2D232E;
+    background-color: #C2D7E7;
+    font-size: 24px;
+
+}

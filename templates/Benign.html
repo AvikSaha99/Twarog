@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Twarog</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='CSS/styles.css') }}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Serif:ital,opsz,wght@0,8..144,100..900;1,8..144,100..900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="container">
+          <div class="logo">
+            <a href="index.html">
+                <img src="{{ url_for('static', filename='images/icon1.svg') }}" alt="Logo">
+            </a>
+        </div>
+          <nav>
+            <ul>
+                <li class="dropdown">
+                    <a href="#" class="dropbtn">Disease</a>
+                    <div class="dropdown-content">
+                        <a href="{{ url_for('basalcell') }}">Basal Cell Carcinoma</a>
+                        <a href="{{ url_for('actinic') }}">Actinic Keratosis</a>
+                        <a href="{{ url_for('melanocytic') }}">Melanocytic Nevi</a>
+                        <a href="{{ url_for('benign') }}">Benign Keratosis</a>
+                        <a href="{{ url_for('melanoma') }}">Melanoma</a>
+                        <a href="{{ url_for('dermatofibroma') }}">Dermatofibroma</a>
+                        <a href="{{ url_for('vascular') }}">Vascular Lesions</a>
+                    </div>
+                </li>
+                <li><a href="{{ url_for('about') }}">About US</a></li>
+                <li><a href="{{ url_for('contact') }}">Contact US</a></li>
+            </ul>
+          </nav>
+        </div>
+      </header>
+    <section class="blog">
+        <div class="blog-container">
+            <h1>Benign Keratosis</h1> 
+            <p>Benign keratosis refers to a group of non-cancerous skin conditions characterized by the overgrowth of keratin, a protein that makes up the outer layer of the skin. These growths are typically harmless but can sometimes be mistaken for more serious skin conditions, such as skin cancer. Common types of benign keratosis include seborrheic keratosis, actinic keratosis, and keratosis pilaris. Understanding these conditions helps in distinguishing them from malignant growths and in managing their symptoms effectively.</p>
+            <p>Benign keratosis encompasses various non-cancerous skin conditions that, while typically harmless, can cause cosmetic concerns and discomfort. By understanding the different types, causes, and symptoms, individuals can effectively manage these conditions and distinguish them from more serious skin issues. Regular skin checks and preventive measures, such as sun protection and proper skincare, play crucial roles in maintaining skin health and preventing complications.</p>
+            <p>Diagnosis of benign keratosis usually involves a visual examination by a dermatologist. Dermatoscopes, magnifying tools, can aid in distinguishing benign keratosis from malignant skin conditions. In some cases, a biopsy may be performed to confirm the diagnosis and rule out skin cancer.</p>
+        </div>
+    </section>
+
+    <div class="image-container">
+        <div class="image-wrapper">
+            <img src="{{ url_for('static', filename='images/Benign 1.jpg') }}" alt="Image 1">
+        </div>
+        <div class="image-wrapper">
+            <img src="{{ url_for('static', filename='images/Benign 2.jpg') }}" alt="Image 2">
+        </div>
+        <div class="image-wrapper">
+            <img src="{{ url_for('static', filename='images/Benign 3.jpg') }}" alt="Image 3">
+        </div>
+        <div class="image-wrapper">
+            <img src="{{ url_for('static', filename='images/Benign 4.jpg') }}" alt="Image 4">
+        </div>
+    </div>
+
+    <section class="links">
+        <div class="links-container">
+            <h5>Important Reference Links</h5>
+            <ul>
+                <li><a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4196312/" target="_blank" rel="noopener noreferrer">Benign Keratosis - National Institute of Health(NIH)</a></li>
+                <li><a href="https://www.mayoclinic.org/diseases-conditions/seborrheic-keratosis/symptoms-causes/syc-20353878" target="_blank" rel="noopener noreferrer">Benign/Seborrheic Keratosis - Mayolinic.org</a></li>
+                <li><a href="https://my.clevelandclinic.org/health/diseases/21721-seborrheic-keratosis" target="_blank" rel="noopener noreferrer">Benign Keratosis: Causes, Symptoms & Treatment - Cleveland Clinic</a></li>
+            </ul>
+        </div>
+    </section>
+    
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Twarog Healthcare. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+</body>
+</html>

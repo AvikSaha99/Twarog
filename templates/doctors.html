@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Twarog</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='CSS/styles.css') }}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Serif:ital,opsz,wght@0,8..144,100..900;1,8..144,100..900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="container">
+          <div class="logo">
+            <a href="index.html">
+                <img src="{{ url_for('static', filename='images/icon1.svg') }}" alt="Logo">
+            </a>
+        </div>
+          <nav>
+            <ul>
+                <li class="dropdown">
+                    <a href="#" class="dropbtn">Disease</a>
+                    <div class="dropdown-content">
+                        <a href="{{ url_for('basalcell') }}">Basal Cell Carcinoma</a>
+                        <a href="{{ url_for('actinic') }}">Actinic Keratosis</a>
+                        <a href="{{ url_for('melanocytic') }}">Melanocytic Nevi</a>
+                        <a href="{{ url_for('benign') }}">Benign Keratosis</a>
+                        <a href="{{ url_for('melanoma') }}">Melanoma</a>
+                        <a href="{{ url_for('dermatofibroma') }}">Dermatofibroma</a>
+                        <a href="{{ url_for('vascular') }}">Vascular Lesions</a>
+                    </div>
+                </li>
+                <li><a href="{{ url_for('about') }}">About US</a></li>
+                <li><a href="{{ url_for('contact') }}">Contact US</a></li>
+            </ul>
+          </nav>
+        </div>
+      </header>
+
+    <section class="hero">
+        <div class="hero-container">
+            <h1>Doctors List</h1>
+            <input type="text" id="searchInput" onkeyup="searchTable()" placeholder="Search for city">
+        </div>
+    </section>
+
+    <table id="doctorsTable">
+        <thead>
+            <tr>
+                <th>Sl. no.</th>
+                <th>Doctor</th>
+                <th>Phone Number</th>
+                <th>City</th>
+                <th>Rating</th>
+                <th>G-Map Link</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>1</td>
+                <td>Dr. Surajit Gorai</td>
+                <td>9123856730</td>
+                <td>Kolkata</td>
+                <td>4.8</td>
+                <td><a href="https://maps.app.goo.gl/ABnGGuzv79S2tBTf7">G-Map</a></td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>Dr. Abhijeet Kumar Jha</td>
+                <td>9472179938</td>
+                <td>Patna</td>
+                <td>4.7</td>
+                <td><a href="https://maps.app.goo.gl/R6oRTLKWWXAHwq9c8">G-Map</a></td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td>Dr. Siddhartha Saikia</td>
+                <td>9979739999</td>
+                <td>Gandhinagar</td>
+                <td>4.8</td>
+                <td><a href="https://maps.app.goo.gl/uR4Dj4BSdSi7qF7r9">G-Map</a></td>
+            </tr>
+            <tr>
+                <td>4</td>
+                <td>Dr. Anju Methil</td>
+                <td>8779911797</td>
+                <td>Mumbai</td>
+                <td>4.7</td>
+                <td><a href="https://maps.app.goo.gl/BkGJgtxyB7nXRnXNA">G-Map</a></td>
+            </tr>
+            <tr>
+                <td>5</td>
+                <td>Dr. (Maj) Partha Mohapatra</td>
+                <td>8093162200</td>
+                <td>Bhubaneswar</td>
+                <td>4.9</td>
+                <td><a href="https://maps.app.goo.gl/YD5bHr3JY8mgZ6aq8">G-Map</a></td>
+            </tr>
+            <tr>
+                <td>6</td>
+                <td>Dr. Shravya G</td>
+                <td>7997990414</td>
+                <td>Hyderabad</td>
+                <td>4.5</td>
+                <td><a href="https://maps.app.goo.gl/jk7we3ZPeNrmGhXv9">G-Map</a></td>
+            </tr>
+            <tr>
+                <td>7</td>
+                <td>Dr. Saravanan.B.N.</td>
+                <td>9445628809</td>
+                <td>Chennai</td>
+                <td>4.8</td>
+                <td><a href="https://maps.app.goo.gl/mVYgrVza99GXiS1C8">G-Map</a></td>
+            </tr>
+            <tr>
+                <td>8</td>
+                <td>Dr. Ajay Kumar Rai</td>
+                <td>9519262342</td>
+                <td>Lucknow</td>
+                <td>4.6</td>
+                <td><a href="https://maps.app.goo.gl/wVXBBudnxhgKmHvd9">G-Map</a></td>
+            </tr>
+        </tbody>
+    </table>
+
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Twarog Healthcare. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        function searchTable() {
+            var input, filter, table, tr, td, i, txtValue;
+            input = document.getElementById("searchInput");
+            filter = input.value.toUpperCase();
+            table = document.getElementById("doctorsTable");
+            tr = table.getElementsByTagName("tr");
+            for (i = 1; i < tr.length; i++) {
+                td = tr[i].getElementsByTagName("td")[3];
+                if (td) {
+                    txtValue = td.textContent || td.innerText;
+                    if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                        tr[i].style.display = "";
+                    } else {
+                        tr[i].style.display = "none";
+                    }
+                }       
+            }
+        }
+    </script>
+
+</body>
+</html>
